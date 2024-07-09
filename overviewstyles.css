@@ -44,14 +44,12 @@ p a:hover{
 
 /* added 6/17 */
 #scroll-to-top{
-  display: none;
-  right: 20px;
+  display: inline-block;
+  width: 15vw;
   z-index: 0;
   position: fixed;
-  bottom: 15px;
-}
-#backtotop:hover{
-  color: #f99f00 !important;
+  top: 95vh;
+  right: 0;
 }
 
 
@@ -110,8 +108,7 @@ p a:hover{
     width: 100%;;
   }
 
-  /* added 6/18 */
-  #scroll-seemore {
+  #scroll-seemore-two {
     display: block;
     font-size: 12px;
     font-family: 'KTFold-Medium';
@@ -119,6 +116,7 @@ p a:hover{
     margin-bottom: 5px;
     width: 100%;;
   }
+
 
   #caption {
     font-family: 'KTFold-Regular';
@@ -242,12 +240,7 @@ p a:hover{
     margin-top: 0;
   }
 
-  #right {
-    display: inline-block;
-    width: 48%;
-    margin-left: 3%;
-    margin-top: 0vh;
-  }
+
 
   #left-half-img {
     width: 46% !important;
@@ -295,24 +288,13 @@ p a:hover{
   }
 
   #mobile-horizontal-scroll img {
-    width: 64%;
+    width: 64vw;
     display: inline-block;
     margin-right: 1.5vw;
   }
 
   #horizontal-img-scroll {
-    width: 100vw;
-    height: 65vh;
-    display: flex;
-    flex-wrap: nowrap;
-    padding-bottom: 50px;
-    margin-bottom: 100px;
-    
-  }
-
-   /* changed 6/18- no position:relative */
-   #horizontal-img-scroll-two {
-    width: 100vw;
+    width: 100%;
     height: 65vh;
     display: flex;
     flex-wrap: nowrap;
@@ -321,14 +303,7 @@ p a:hover{
   }
 
   #scroll-item {
-    width: 30%;
-    margin-right: 20px;
-    height: auto;
-  }
-
-  #scroll-two-item {
-    width: 30%;
-    margin-right: 20px;
+    width: 65%;
     height: auto;
   }
 
@@ -337,29 +312,46 @@ p a:hover{
     overflow-y: hidden;
     width: 100% !important;
     display: block;
-    position: relative;
   }
+
+  #scroll-anchor-wrapper{
+    display: block;
+    height: 30vh!important;
+    background-color: black;
+  }
+
 
   #scroll-container-two {
     overflow-x: hidden !important;
     overflow-y: hidden;
     width: 100% !important;
+    margin-top: 50vh !important;
     display: block;
-    position: relative;
+
   }
 
-
+  #horizontal-img-scroll-two {
+    width: 100%;
+    height: 65vh;
+    display: flex;
+    flex-wrap: nowrap;
+    position: relative;
+    padding-bottom: 50px;
+    margin-bottom: 100px;
+    position: relative !important;
+    margin-top: 200px !important;
+  }
 
   #horizontal-img-scroll img {
     height: 95%;
     display: inline-block;
-    margin-right: 20px;
+    margin-right: 1.5vw;
   }
 
   #horizontal-img-scroll-two img {
     height: 95%;
     display: inline-block;
-    margin-right: 20px;
+    margin-right: 1.5vw;
   }
 
   #full-width-carousel {
@@ -387,21 +379,23 @@ p a:hover{
     margin-top: 20px;
   }
 
-  /* changed 6/18 */
   .page-breaker {
     min-height: 100vh;
+    position: relative;
     display: block;
     flex-direction: column;
     justify-content: center;
+    margin-top: 100px;
     z-index: 100;
   }
 
-  /* changed 6/18 */
   .page-breaker-two {
     min-height: 100vh;
+    position: relative;
     display: block;
     flex-direction: column;
     justify-content: center;
+    margin-top: 200px;
     z-index: 100;
   }
 
@@ -508,10 +502,7 @@ p a:hover{
   #arrows {
     display: inline-block;
     width: 80px;
-  }
-
-  .slick-arrow{
-    display: inline-block !important;
+    /* added 6/17 */
   }
 
   .slick-controls {
@@ -544,25 +535,19 @@ p a:hover{
     margin-bottom: 0px;
     float: right;
   }
-/* added 6/17 */
+
   a {
     text-decoration: underline;
-    color: black !important;
   }
 
+  /* added 6/17 */
   .slick-arrow {
     -webkit-tap-highlight-color: transparent !important;
-    color: black !important;
-  }
-
-  .slick-arrow:hover{
-    color: #f99f00;
   }
 
   .slick-arrow:focus {
     outline: none !important;
   }
-/* */
 
   @media only screen and  (max-width: 1256px) {
 
@@ -634,9 +619,10 @@ p a:hover{
       margin-bottom: 0 !important;
     }
 
-    #overlap-img {
+    #overlap-img{
       margin-bottom: 5vh !important;
     }
+
 
     #arrows {
       width: 8vw !important;
@@ -788,24 +774,9 @@ p a:hover{
       margin-bottom: 0 !important;
     }
 
-    /* added 6/17 */
-    #scroll-to-top{
-      margin-bottom: 0;
-      margin-left: 12vw !important;
-      margin-top: 20vh !important;
-      width: 70vw;
-      text-align: center;
-      position: static;
-      display: block;
-    }
-
   }
 
   @media only screen and (max-width: 576px) {
-
-    #arrows {
-      width: 18vw !important;
-    }
 
     .fk-title {
       margin-bottom: 20vh !important;
@@ -895,31 +866,20 @@ p a:hover{
       display: block;
     }
 
+    #left {
+      width: 100% !important;
+    }
+
     #right-half-img {
-      width: 100%;
+      width: 100% !important;
       margin-left: 0;
       margin-top: 5vh !important;
       display: block;
     }
 
-/* added 6/18 */
-
-    .slick-controls-two {
-      width: 25vw !important;
-      margin-left: 2% !important;
+    #arrows {
+      width: 20vw !important;
     }
-
-    .slick-controls-three {
-      width: 25vw !important;
-      margin-left: 2% !important;
-    }
-
-    .slick-controls-four {
-      width: 30vw !important;
-      margin-left: 2% !important;
-    }
-  
-    /* */
 
     #caption {
       width: 50% !important;
@@ -1002,8 +962,6 @@ p a:hover{
     #moma-carousel {
       height: 20vh;
       margin-top: 5vh !important;
-      margin-bottom: 20vh !important;
-      z-index: 1000;
     }
 
     #moma-carousel img {
@@ -1047,6 +1005,7 @@ p a:hover{
 
     .cato-carousel {
       margin-top: -15vh !important;
+      width: 100% !important;
     }
 
     #sheila-carousel {
@@ -1078,7 +1037,16 @@ p a:hover{
     }
 
 
+/* added 6/17 */
+    #scroll-to-top{
+      margin-top: 15vh;
+      margin-bottom: 0;
+      text-align: center;
+    }
 
+    .cato{
+      width: 100% !important;
+    }
 
   }
 
